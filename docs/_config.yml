@@ -1,0 +1,36 @@
+title: Your Project Name
+description: Your project description
+theme: jekyll-theme-minimal
+
+# Build settings
+markdown: kramdown
+remote_theme: pages-themes/minimal@v0.2.0
+
+# Enable all the plugins
+plugins:
+  - jekyll-coffeescript
+  - jekyll-default-layout
+  - jekyll-gist
+  - jekyll-github-metadata
+  - jekyll-optional-front-matter
+  - jekyll-paginate
+  - jekyll-readme-index
+  - jekyll-titles-from-headings
+  - jekyll-relative-links
+
+# Plugin settings
+paginate: 5
+optional_front_matter:
+  remove_originals: true
+readme_index:
+  enabled: true
+  remove_originals: true
+titles_from_headings:
+  enabled: true
+  strip_title: true
+relative_links:
+  enabled: true
+  collections: true
+
+# GitHub metadata settings
+repository: username/repository-name  # Replace with your GitHub username/repo
