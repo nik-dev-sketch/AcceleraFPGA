@@ -1,9 +1,5 @@
-# HiveFPGA
-Here’s a **concise yet comprehensive description** for **HiveFPGA** in **under 350 words**:
-
----
-
-**HiveFPGA** is a **collaborative ecosystem** that seamlessly integrates **FPGA hardware** with **modern software stacks** to enable **low-latency, high-performance solutions** for compute-intensive workflows. Designed for industries like **semiconductor design, defence, fintech, and AI/ML**, this framework combines the **power of FPGA acceleration** with the **flexibility of microservices, GraphQL, and React** to create a unified platform for innovation.  
+# AcceleraFPGA
+**AcceleraFPGA** is a **collaborative ecosystem** that seamlessly integrates **FPGA hardware** with **modern software stacks** to enable **low-latency, high-performance solutions** for compute-intensive workflows. Designed for industries like **semiconductor design, defence, fintech, and AI/ML**, this framework combines the **power of FPGA acceleration** with the **flexibility of microservices, GraphQL, and React** to create a unified platform for innovation.  
 
 **Key Features:**  
 ✅ **React Frontend:** User-friendly dashboard for input/output.  
