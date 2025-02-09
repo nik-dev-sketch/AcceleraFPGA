@@ -33,7 +33,6 @@ title: AcceleraFPGA
 - [Architecture Definition](#architecture-definition)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
 - [Usage](#usage)
 - [Documentation](#documentation)
 - [Examples](#examples)
@@ -184,7 +183,7 @@ By following this roadmap, a robust, scalable, and unified framework can be crea
 <div align="center">
   <img src="https://via.placeholder.com/800x400" alt="AcceleraFPGA Architecture" style="max-width: 100%;">
 </div>
-
+push
 ## Conceptual Worth?
 
 The idea of integrating FPGA with microservices, GraphQL BFF, and a React frontend is **highly innovative and has significant potential** in industries that require **high-performance computing, low-latency processing, and AI/ML capabilities**. Whether you can build a business out of this depends on your ability to **identify market needs, execute the idea, and scale it effectively**. Let’s break it down:
@@ -424,7 +423,7 @@ Yes, but with caution. Here’s how to approach it:
 ---
 
 ### **Final Thoughts**
-Your idea has **tremendous potential**, especially with the enhancements suggested. By broadening its capabilities, you can cater to **multiple industries** and create a **scalable business**. While patenting can protect your IP, focus on **execution and market validation** first. Share the idea **strategically online** to build momentum without revealing sensitive details. Good luck! 🚀
+The idea has **tremendous potential**, especially with the enhancements suggested. By broadening its capabilities, you can cater to **multiple industries** and create a **scalable business**. While patenting can protect your IP, focus on **execution and market validation** first. Share the idea **strategically online** to build momentum without revealing sensitive details. Good luck! 🚀
 
 ## 🚀 Getting Started
 
@@ -434,20 +433,3 @@ Your idea has **tremendous potential**, especially with the enhancements suggest
 - Python 3.8+
 - CMake 3.15+
 - Modern C++ Compiler (GCC 9+ or Clang 10+)
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/nik-dev-sketch/AcceleraFPGA.git
-
-# Navigate to the project directory
-cd AcceleraFPGA
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Build the project
-mkdir build && cd build
-cmake ..
-make
