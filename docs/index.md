@@ -515,6 +515,7 @@ The idea has **tremendous potential**, especially with the enhancements suggeste
 
 ## Processing Flow of the Power Analysis Example
 
+```mermaid
 sequenceDiagram
     participant FE as Frontend Commands
     participant GQL as GraphQL API
@@ -536,6 +537,7 @@ sequenceDiagram
     
     FPGA->>K2: Stream Results
     K2->>FE: Real-time Updates
+```
 
 ## 🚀 Getting Started
 
