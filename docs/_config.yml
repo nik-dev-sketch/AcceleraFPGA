@@ -1,5 +1,5 @@
-title: Your Project Name
-description: Your project description
+title: AcceleraFPGA
+description: AcceleraFPGA is a collaborative ecosystem that seamlessly integrates FPGA hardware with modern software stacks to enable low-latency, high-performance solutions for compute-intensive workflows. Designed for industries like semiconductor design, defence, fintech, and AI/ML.
 theme: jekyll-theme-minimal
 
 # Build settings
@@ -33,4 +33,4 @@ relative_links:
   collections: true
 
 # GitHub metadata settings
-repository: username/repository-name  # Replace with your GitHub username/repo
+repository: nik-dev-sketch/AcceleraFPGA
