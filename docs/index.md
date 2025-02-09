@@ -515,28 +515,30 @@ The idea has **tremendous potential**, especially with the enhancements suggeste
 
 ## Processing Flow of the Power Analysis Example
 
-```mermaid
-sequenceDiagram
-    participant FE as Frontend Commands
-    participant GQL as GraphQL API
-    participant BFF as BFF Translation
-    participant GW as API G/W
-    participant PAS as Power Analysis Service
-    participant K1 as Kafka (Design Data)
-    participant FPGA as FPGA Cluster
-    participant K2 as Kafka (Results)
+```gherkin
+Frontend Commands           GraphQL API             BFF Translation         API G/W              Power Analysis Service        Kafka              FPGA Cluster                Results
+       |                        |                        |                    |                          |                        |                     |                          |
+       |-----commands-------→   |                        |                    |                          |                        |                     |                          |
+       |                        |                        |                    |                          |                        |                     |                          |
+       |                        |----translate-----→     |                    |                          |                        |                     |                          |
+       |                        |                        |                    |                          |                        |                     |                          |
+       |                        |                        |----route------→    |                          |                        |                     |                          |
+       |                        |                        |                    |                          |                        |                     |                          |
+       |                        |                        |                    |----process----------→    |                        |                     |                          |
+       |                        |                        |                    |                          |                        |                     |                          |
+       |                        |                        |                    |                          |-----design data--→     |                     |                          |
+       |                        |                        |                    |                          |                        |                     |                          |
+       |                        |                        |                    |                          |                        |----parallel comp-→  |                          |
+       |                        |                        |                    |                          |                        |                     |                          |
+       |                        |                        |                    |                          |                        |     [Power Analysis]|                          |
+       |                        |                        |                    |                          |                        |     [MLA Design Opt]|                          |
+       |                        |                        |                    |                          |                        |     [HW Accelerated]|                          |
+       |                        |                        |                    |                          |                        |                     |                          |
+       |                        |                        |                    |                          |                        |                     |----results via kafka→    |
+       |                        |                        |                    |                          |                        |                     |                          |
+       |←--real-time updates---|                        |                    |                          |                        |                     |                          |
+       |                        |                        |                    |                          |                        |                     |                          |
 
-    FE->>GQL: Submit Analysis Request
-    GQL->>BFF: Translate Request
-    BFF->>GW: Route Request
-    GW->>PAS: Process Request
-    PAS->>K1: Publish Design Data
-    K1->>FPGA: Consume Design Data
-    
-    Note over FPGA: Parallel Processing:<br/>1. Power Analysis<br/>2. MLA Design Optimization<br/>3. Hardware-accelerated computations
-    
-    FPGA->>K2: Stream Results
-    K2->>FE: Real-time Updates
 ```
 
 ## 🚀 Getting Started
