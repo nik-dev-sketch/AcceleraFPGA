@@ -74,6 +74,7 @@ title: AcceleraFPGA
     - [Why Share?](#why-share)
   - [Industries You Can Target with Enhanced Capabilities](#industries-you-can-target-with-enhanced-capabilities)
   - [Next Steps](#next-steps)
+
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
 - [Usage](#usage)
@@ -465,6 +466,76 @@ Yes, but with caution. Here’s how to approach it:
 
 ### **Final Thoughts**
 The idea has **tremendous potential**, especially with the enhancements suggested. By broadening its capabilities, you can cater to **multiple industries** and create a **scalable business**. While patenting can protect your IP, focus on **execution and market validation** first. Share the idea **strategically online** to build momentum without revealing sensitive details. Good luck! 🚀
+
+## Example - Power Analysis Architectural Flow
+
+### Frontend (React + GraphQL)
+1. Power analysis dashboard where user input the data or command
+2. Real-time visualization of power hotspots
+3. Interactive power density maps
+
+### BFF
+1. GraphQL resolver translates UI commands to API Calls
+2. Subscription handling for real-time updates
+3. Request validation and authentication
+
+### API Gateways
+1. Routes requests to appropriate microservices
+2. Rate Limiting and throttling 
+3. JWT token validation (OAUTH2.0 and OIDC)
+
+### Load Banalcer (HAProxy)
+1. Distributes the traffic across service instances
+2. Health Check
+3. SSL Termination
+
+### Microservices (Spring boot)
+1. Design Parser Service: Parse IC Design Files
+2. Power Analysis Service: Initial Power Calculations
+3. Optimization Service: Coordinates Optimization tasks
+4. Results Aggregrator Service: Collects and formats results
+
+### Message Bus (Kafka)
+1. Topics for design block data
+2. Power analysis results
+3. Optimization commands
+4. Real-time Updates
+
+### Database
+1. PostgreSQL: Design metadata, User data
+2. MongoDB: Design block structures
+3. InfluxDB: Time-Series power measurements
+4. Redis: Caching frequently accessed designs
+
+### FPGA Accelerations
+1. Power analysis matrix computations
+2. Parallel Optimization algorithms
+3. Machine learning model for power prediction 
+4. Custom hardware accelerations for power estimation
+
+## Processing Flow of the Power Analysis Example
+
+sequenceDiagram
+    participant FE as Frontend Commands
+    participant GQL as GraphQL API
+    participant BFF as BFF Translation
+    participant GW as API G/W
+    participant PAS as Power Analysis Service
+    participant K1 as Kafka (Design Data)
+    participant FPGA as FPGA Cluster
+    participant K2 as Kafka (Results)
+
+    FE->>GQL: Submit Analysis Request
+    GQL->>BFF: Translate Request
+    BFF->>GW: Route Request
+    GW->>PAS: Process Request
+    PAS->>K1: Publish Design Data
+    K1->>FPGA: Consume Design Data
+    
+    Note over FPGA: Parallel Processing:<br/>1. Power Analysis<br/>2. MLA Design Optimization<br/>3. Hardware-accelerated computations
+    
+    FPGA->>K2: Stream Results
+    K2->>FE: Real-time Updates
 
 ## 🚀 Getting Started
 
