@@ -24,7 +24,7 @@
 ✅ **FPGA Layer:** AI/ML acceleration and compute-intensive algorithms.  
 ✅ **Cloud-Native:** Leverages **AWS, Kafka, and Kubernetes** for scalability and event-driven workflows.  
 
-**Why HiveFPGA?**  
+**Why AcceleraFPGA?**  
 ✨ **Collaborative Ecosystem:** Built for developers, researchers, and enterprises to innovate together.  
 ✨ **Low-Latency Processing:** Ideal for real-time analytics, AI/ML inference, and high-frequency trading.  
 ✨ **Scalability:** Handles high workloads in cloud, edge, and hybrid environments.  
